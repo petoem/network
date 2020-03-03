@@ -1,0 +1,122 @@
+<html>
+  <head>
+    <title>AS207299 - Autonomous System</title>
+    <meta charset="utf-8" />
+    <style>
+      body {
+        background-color: #14182B;
+        font-family: monospace;
+        color: #fff;
+        font-weight: bold;
+        font-size: large;
+      }
+      p,
+      pre {
+        text-align: left;
+        margin: 0.5em auto;
+      }
+      a {
+        color: #fff;
+      }
+      a:hover {
+        color: #dfdfdf;
+      }
+
+      /* CSS Grid */
+      .parent {
+        display: grid;
+        grid-template-columns: 1fr 1080px 1fr;
+        grid-template-rows: auto 1fr auto;
+        grid-column-gap: 0px;
+        grid-row-gap: 15px;
+        /* min-height: 100%; */
+      }
+
+      /* Header */
+      .header {
+        grid-area: 1 / 1 / 2 / 4;
+      }
+      .header pre {
+        text-align: center;
+      }
+      /* Content */
+      .content {
+        grid-area: 2 / 2 / 3 / 3;
+
+        border-color: #fff;
+        border-style: double;
+        border-width: 3px;
+
+        padding: 2em;
+      }
+      /* Footer */
+      .footer {
+        grid-area: 3 / 2 / 4 / 3;
+      }
+
+      /* Miscs */
+      .emoji {
+        font-family: emoji;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      <div class="header">
+        <pre>
+    ___   ________   ____  ________  ____  ____ 
+   /   | / ___/__ \ / __ \/__  /__ \/ __ \/ __ \
+  / /| | \__ \__/ // / / /  / /__/ / /_/ / /_/ /
+ / ___ |___/ / __// /_/ /  / // __/\__, /\__, / 
+/_/  |_/____/____/\____/  /_//____/____//____/  
+        </pre>
+      </div>
+      <div class="content">
+        <p>
+          AS207299 is a network operated by <a href="https://petoe.me/" alt="Michael Petö">Michael Petö</a>. 
+          It is used for R&D, in diverse fields, with both commerical and non-commercial background. 
+        </p>
+        <h1>Peering</h1>
+        <p>
+          We utilize an open peering policy. <br>
+          Peering or transit is possible if you fit the specified ruling we have.
+          <br><br>
+          In order to peer with us, you must
+          <ul>
+            <li>Have a publicly routable ASN. </li>
+            <li>Have at least one public routable IP address space. (minimal size is /48 for IPv6 and /24 for IPv4) </li>
+            <li>Have a record in PeeringDB for your ASN. </li>
+            <li>Only send us traffic that is destined for us, we will do the same. </li>
+            <li>Be willing to connect to us via Internet eXchange, Tunneling, VPN, ...</li>
+            <li>Be able to respond on at least regular hours (preferably on weekdays) in under a day. </li>
+          </ul>
+
+          For all peers, we use
+          <ul>
+            <li>Max-prefix filters on both IPv4 and IPv6. </li>
+            <li>Filters for Bogon prefixes. </li>
+          </ul>
+
+          In order to get transit, you must
+          <ul>
+            <li>Declare how much bandwidth and traffic you will likely use. </li>
+            <li>Fit the same ruling as peers. </li>
+          </ul>
+
+          More information about AS207299 can be found on <a href="https://peeringdb.com/net/22520">PeeringDB</a> and <a href="https://bgp.he.net/AS207299">bgp.he.net</a>. 
+        </p>
+        <h1>Contact</h1>
+        <p>
+          For network related inquiries or anything else, you can check my <a href="https://petoe.me/" alt="Michael Petö">personal site</a>. 
+        </p>
+      </div>
+      <div class="footer">
+        <p>
+          Made with <span class="emoji">❤️</span> by
+          <a href="https://petoe.me/" alt="Michael Petö">Michael Petö</a> / ©
+          2020 All rights reserved.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
