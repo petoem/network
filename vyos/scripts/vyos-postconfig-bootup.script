@@ -1,0 +1,23 @@
+#!/bin/sh
+# This script is executed at boot time after VyOS configuration is fully
+# applied. Any modifications required to work around unfixed bugs or use
+# services not available through the VyOS CLI system can be placed here.
+
+# Append to sources.list the debian buster mirrors
+tee -a /etc/apt/sources.list << END
+deb http://deb.debian.org/debian buster main contrib non-free
+deb-src http://deb.debian.org/debian buster main contrib non-free
+
+deb http://deb.debian.org/debian-security/ buster/updates main contrib non-free
+deb-src http://deb.debian.org/debian-security/ buster/updates main contrib non-free
+
+deb http://deb.debian.org/debian buster-updates main contrib non-free
+deb-src http://deb.debian.org/debian buster-updates main contrib non-free
+
+deb http://deb.debian.org/debian buster-backports main contrib non-free
+deb-src http://deb.debian.org/debian buster-backports main contrib non-free
+END
+
+# Install deps for auto deploy
+apt-get update -qq
+apt-get install -qq git
