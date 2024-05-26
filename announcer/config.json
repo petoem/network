@@ -1,0 +1,31 @@
+{
+  "RouterID": "10.0.0.1",
+  "Peers": [
+    {
+      "RemoteAddress": "192.0.0.2",
+      "LocalAS": 64550,
+      "RemoteAS": 65000,
+      "LocalAddress": "192.0.0.1",
+      "EnableAddPath": true,
+      "EnableIPv4": false,
+      "EnableIPv6": true,
+      "Networks": {
+        "V4": ["128.0.0.0/24", "128.1.0.0/24"],
+        "V6": []
+      }
+    },
+    {
+      "RemoteAddress": "172.0.0.3",
+      "LocalAS": 64550,
+      "RemoteAS": 65000,
+      "LocalAddress": "172.0.0.1",
+      "EnableAddPath": true,
+      "EnableIPv4": false,
+      "EnableIPv6": true,
+      "Networks": {
+        "V4": [],
+        "V6": ["2001:abcd:abcd:0011::0/64"]
+      }
+    }
+  ]
+}
